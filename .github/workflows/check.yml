@@ -1,0 +1,27 @@
+name: check templates
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        template: [go, cpp, rust, python, javascript, haskell, ocaml, c, java]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+      - name: Build template
+        working-directory: templates/${{ matrix.template }}
+        run: nix build
+      - name: Verify language-independent output contract
+        working-directory: templates/${{ matrix.template }}
+        run: |
+          test -x result/bin/hello
+          test -x result/bin/goodbye
+          result/bin/hello
+          result/bin/goodbye

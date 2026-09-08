@@ -1,0 +1,4 @@
+(executables
+ (names hello goodbye)
+ (public_names hello goodbye)
+ (package student_apps))

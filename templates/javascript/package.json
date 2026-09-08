@@ -1,0 +1,9 @@
+{
+  "name": "student-apps",
+  "private": true,
+  "version": "0.1.0",
+  "bin": {
+    "hello": "cli/hello.js",
+    "goodbye": "cli/goodbye.js"
+  }
+}
