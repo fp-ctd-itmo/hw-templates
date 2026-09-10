@@ -51,7 +51,7 @@
               for name in ${executableArgs}; do
                 cp -R "build/classes/$name" "$out/lib/student-apps/$name"
                 makeWrapper ${pkgs.jdk21}/bin/java "$out/bin/$name" \
-                  --add-flags "-cp $out/lib/student-apps/$name Main"
+                  --add-flags "-Xmx8g -cp $out/lib/student-apps/$name Main"
               done
               runHook postInstall
             '';
