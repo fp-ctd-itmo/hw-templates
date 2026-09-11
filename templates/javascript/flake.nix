@@ -32,7 +32,7 @@
                 exit 1
               }
               makeWrapper ${pkgs.nodejs}/bin/node "$out/bin/$name" \
-                --add-flags "$out/lib/student-apps/$script"
+                --add-flags "--max-old-space-size=8192 $out/lib/student-apps/$script"
             '') binNames;
         in {
           default =
