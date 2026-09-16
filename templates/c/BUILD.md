@@ -41,8 +41,8 @@ pull request runs the checker for every executable in `result/bin`. The action
 logs show which checks passed and failed, but do not record a final result.
 
 After the pull request is merged, the resulting push to `main` runs the
-checker in CS++ mode and records the result in the final grade journal.
+checker and records the result in the final grade journal.
 
 To submit corrections, open another pull request into `main`. A direct push to
-`main` also runs the CS++ check and updates the final result, but is not
+`main` also runs the checker and updates the final result, but is not
 recommended.
