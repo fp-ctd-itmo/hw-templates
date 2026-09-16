@@ -48,6 +48,21 @@
         description = "Java multi-executable application";
       };
 
+      scala = {
+        path = ./templates/scala;
+        description = "Scala multi-executable application";
+      };
+
+      kotlin = {
+        path = ./templates/kotlin;
+        description = "Kotlin multi-executable application";
+      };
+
+      typescript = {
+        path = ./templates/typescript;
+        description = "TypeScript multi-executable application";
+      };
+
       default = self.templates.go;
     };
   };

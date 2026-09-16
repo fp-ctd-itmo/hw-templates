@@ -2,7 +2,7 @@
 set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-templates=(go cpp rust python javascript haskell ocaml c java)
+templates=(go cpp rust python javascript haskell ocaml c java scala kotlin typescript)
 
 for template in "${templates[@]}"; do
   echo "==> checking $template"

@@ -1,6 +1,6 @@
 # Multi-executable Nix project starters
 
-Supported languages: C, C++, Go, Haskell, Java, JavaScript, Ocaml, Python, Rust.
+Supported languages: C, C++, Go, Haskell, Java, JavaScript, Kotlin, Ocaml, Python, Rust, Scala, TypeScript.
 
 ## Nix
 
@@ -20,9 +20,12 @@ Executables are defined using each language's own conventions:
 | `haskell` | Haskell | Cabal `executable` stanzas |
 | `java` | Java | fallback: `apps/<name>/` |
 | `javascript` | JavaScript | `package.json` `bin` |
+| `kotlin` | Kotlin (JVM) | fallback: `apps/<name>/` |
 | `ocaml` | OCaml | Dune `executable` / `executables` stanzas |
 | `python` | Python | `pyproject.toml` `[project.scripts]` |
 | `rust` | Rust | Cargo binary targets (`src/bin`, `[[bin]]`) |
+| `scala` | Scala 3 (JVM) | fallback: `apps/<name>/` |
+| `typescript` | TypeScript | `package.json` `bin` pointing to compiled JavaScript |
 
 For fallback languages, the executable name is the directory name under `apps/`.
 

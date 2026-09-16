@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
-        template: [go, cpp, rust, python, javascript, haskell, ocaml, c, java]
+        template: [go, cpp, rust, python, javascript, haskell, ocaml, c, java, scala, kotlin, typescript]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
